@@ -315,31 +315,27 @@ footer{
     }
 
     .header-links{
-        display: none;
-    }
-
-    .header-link{
-        margin: 15px 0 0 16vw;
-    }
-
-    header{
-        z-index: 3;
-    }
-
-}
-
-.menu-show{
-    display: flex;
+        display: flex;
     flex-flow: wrap column;
     justify-content: flex-start;
     align-items: flex-start;
     position: absolute;
     left: 0;
     top: 0px;
-    opacity: 0;
+    opacity: 1;
     width: 100vw;
     height: 25vh;
     background: var(--dark-blue);
+    z-index: -1;
+    }
+
+    .header-link{
+        margin: 15px 0 0 16vw;
+    }
+
+}
+
+/* .menu-show{
     animation: show-menu 1s ease-out forwards;
     
 }
@@ -353,22 +349,19 @@ footer{
             height: 25vh;
             background: var(--dark-blue);
     animation: hide-menu 1s ease-out forwards;
-}
+} */
 
 @keyframes show-menu {
-    30%{
-        opacity: 0;
-        top: 40px;
-    }100%{
-        opacity: 1;
+to{
         top: 100px;
+        z-index: 0;
     }
 }
 
 @keyframes hide-menu {
 
     to{
-        opacity: 0;
+        z-index: -1;
         top: 0px;
     }
 }

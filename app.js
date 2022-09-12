@@ -5,10 +5,12 @@ var menu_hidden = true;
 menu_btn.addEventListener('click', ()=>{
     if(menu_hidden){
         menu_hidden = false
-        header_links.classList.add('menu-show');
+        header_links.style.animation = 'show-menu 1s ease-out forwards';
+        console.log('show')
     }else{
         menu_hidden = true
-        header_links.classList.add('menu-hide');
+        header_links.style.animation = 'hide-menu 1s ease-out forwards';
+        console.log('hide')
     }
     
 });

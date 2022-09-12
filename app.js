@@ -64,13 +64,24 @@ send_btn.addEventListener('click', ()=>{
 
     // Phone Number Validation
     let country_code = phone_input.value.slice(0, 4);
+    
     if(country_code == '+961'){
-        console.log('valid');
+        
+        if( phone_input.value.slice(4)[0] == '3'){
+            if(phone_input.value.slice(4).length <7){
+                error_popup.innerText = 'phone number too short (i.e: +9613456789)';
+                error_popup.style.display = 'flex';
+            }
+        }else{
+            if(phone_input.value.slice(4).length <8){
+                error_popup.innerText = 'phone number too short (i.e: +96171456789)';
+                error_popup.style.display = 'flex';
+            }
+        }
+
     }else{
         error_popup.innerText = 'country code must be "+961"';
         error_popup.style.display = 'flex';
     }
-
-
 
 });

@@ -1,0 +1,35 @@
+/* RESET */
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* UTILITIES */
+:root {
+    --btn-color: #1abc9c;
+    --dark-blue: #2c3e50;
+    --darker-blue: #1a252f;
+}
+
+.blue-btn{
+    padding: 10px 10px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 7px;
+    background: var(--btn-color);
+    border: none;
+}
+
+.outline-btn {
+    padding: 10px 10px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 7px;
+    background: transparent;
+    border: 2px solid white;
+}
+
+.links{
+    color: var(--btn-color);
+}

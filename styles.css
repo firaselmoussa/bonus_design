@@ -231,6 +231,11 @@ header{
     justify-content: center;
     align-items: center;
 }
+@media only screen and (max-width: 666px) {
+.contact-form {
+    width: 100%;
+}
+}
 
 .contact-form h1{
     font-size: 50px;
@@ -265,7 +270,7 @@ header{
 
 footer{
     background: var(--dark-blue);
-    height: 60vh;
+    height: fit-content;
 }
 
 .upper-footer{
@@ -273,11 +278,25 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* width: 90%; */
+        flex-flow: wrap row;
 }
 
 .upper-footer div{
     width: 25%;
+}
+
+@media only screen and (max-width: 750px) {
+    .upper-footer {
+        display: flex;
+        flex-flow: wrap column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .upper-footer div {
+        width: 50%;
+    }
+
 }
 
 .footer-imgs{
@@ -335,21 +354,6 @@ footer{
 
 }
 
-/* .menu-show{
-    animation: show-menu 1s ease-out forwards;
-    
-}
-
-.menu-hide {
-        display: flex;
-            flex-flow: wrap column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width: 100vw;
-            height: 25vh;
-            background: var(--dark-blue);
-    animation: hide-menu 1s ease-out forwards;
-} */
 
 @keyframes show-menu {
 to{

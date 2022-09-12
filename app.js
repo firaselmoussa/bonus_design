@@ -14,3 +14,19 @@ menu_btn.addEventListener('click', ()=>{
     }
     
 });
+
+// CONTACT FORM INPUTS VALIDATION
+let send_btn = document.getElementById('send-btn');
+let contact_error = document.getElementById('contact-error')
+let name_input = document.getElementById('name-input');
+
+send_btn.addEventListener('click', ()=>{
+
+    // Name validation
+    if(name_input.value.length < 5){
+        contact_error.innerText = 'name too short(minimum 5characters)';
+    }else{
+        contact_error.innerText = 'name good ';
+    }
+
+})

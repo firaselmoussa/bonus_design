@@ -108,16 +108,19 @@
 
     <section class="contact-section" id="contact">
 
-<form action="" class="contact-form">
+<form action="" class="contact-form" onsubmit="return false">
         <h1>CONTACT ME</h1>
                 
             <div class="break-star">
                 <hr class="dark">
                 <img src="images/star - dark.png" alt="">
                 <hr class="dark">
+
+                <p id="contact-error"></p>
+
             </div>
 
-            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Full Name" id="name-input">
 
             <input type="text" placeholder="Email Address">
 
@@ -125,7 +128,7 @@
 
             <textarea name="" id="" cols="40" rows="10" placeholder="Message"></textarea>
 
-            <button class="blue-btn">Send</button>
+            <button class="blue-btn" id="send-btn">Send</button>
 
 </form>
 

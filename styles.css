@@ -32,10 +32,20 @@ body{
     border-radius: 7px;
     background: transparent;
     border: 2px solid white;
+    cursor: pointer;
+}
+
+.outline-btn:hover{
+    background: white;
+    color: black;
 }
 
 .link{
     color: var(--btn-color);
+}
+
+.link:hover {
+    filter: brightness(.9);
 }
 
 /* HEADER */
@@ -58,6 +68,10 @@ header{
     color: white;
     margin: 0 30px;
     text-decoration: none;
+}
+
+.header-link:hover{
+    color: var(--btn-color);
 }
 
 /* HOME SECTION */

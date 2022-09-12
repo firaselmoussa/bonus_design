@@ -14,6 +14,11 @@ body{
     --darker-blue: #1a252f;
 }
 
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 .blue-btn{
     padding: 10px 10px;
     width: fit-content;

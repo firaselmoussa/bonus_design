@@ -89,11 +89,18 @@ header{
 }
 
 .break-star hr {
-    background: black;
     border: none;
     border-radius: 5px;
     width: 100px;
     height: 5px;
+}
+
+.light {
+    background: white;
+}
+
+.dark{
+    background: var(--dark-blue);
 }
 
 .home-section h1{

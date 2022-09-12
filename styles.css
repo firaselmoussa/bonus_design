@@ -24,7 +24,7 @@ body{
 }
 
 .outline-btn {
-    padding: 10px 10px;
+    padding: 0px 20px;
     width: fit-content;
     height: fit-content;
     border-radius: 7px;
@@ -103,7 +103,6 @@ header{
 .portfolio-section{
     color: var(--dark-blue);
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-flow: wrap row;
     justify-content: center;
@@ -134,4 +133,44 @@ header{
 .project{
     width:30%;
     border-radius: 10px;
+}
+
+/* ABOUT */
+
+.about-section{
+    background: var(--btn-color);
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section h1 {
+    font-size: 50px;
+    margin-left: 50px;
+}
+
+.about-info{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-info p{
+    width:40%;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.download-btn{
+    display: flex;
+    flex-flow: wrap row;
+}
+
+.download-btn img{
+    width: 25px;
+    margin-right: 10px;
 }

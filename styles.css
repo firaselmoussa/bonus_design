@@ -34,7 +34,7 @@ body{
     border: 2px solid white;
 }
 
-.links{
+.link{
     color: var(--btn-color);
 }
 
@@ -142,7 +142,7 @@ header{
 .about-section{
     background: var(--btn-color);
     width: 100vw;
-    height: 80vh;
+    height: fit-content;
     display: flex;
     flex-flow: wrap row;
     justify-content: center;
@@ -170,6 +170,7 @@ header{
 .download-btn{
     display: flex;
     flex-flow: wrap row;
+    margin-bottom: 50px;
 }
 
 .download-btn img{
@@ -221,4 +222,50 @@ header{
 .contact-form button{
     align-self: flex-start;
     margin: 20px 0 60px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background: var(--dark-blue);
+    height: 60vh;
+}
+
+.upper-footer{
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* width: 90%; */
+}
+
+.upper-footer div{
+    width: 25%;
+}
+
+.footer-imgs{
+    width: 100%;
+    display: flex;
+}
+
+.footer-imgs img{
+    width:50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer-imgs img:nth-child(4) {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.lower-footer{
+    background: var(--darker-blue);
+    width: 100%;
+    height:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

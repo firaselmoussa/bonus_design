@@ -97,3 +97,41 @@ header{
 .home-section h1{
     font-size: 50px;
 }
+
+/* PORTFOLIO */
+
+.portfolio-section{
+    color: var(--dark-blue);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-section h1{
+    font-size: 50px;
+}
+
+.projects-container{
+    width:100%;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-container div{
+    width: 85%;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%;
+}
+
+.project{
+    width:30%;
+    border-radius: 10px;
+}

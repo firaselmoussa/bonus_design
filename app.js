@@ -20,6 +20,7 @@ let send_btn = document.getElementById('send-btn');
 let error_popup= document.getElementById('error-popup')
 let name_input = document.getElementById('name-input');
 let email_input = document.getElementById('email-input');
+let phone_input = document.getElementById('phone-input');
 
 send_btn.addEventListener('click', ()=>{
 
@@ -51,14 +52,23 @@ send_btn.addEventListener('click', ()=>{
 
         
         if(email_parts[0].length < 3){
-            error_popup.innerText = 'gmail name is too short';
+            error_popup.innerText = 'gmail name is too short (minimum 3 characters)';
             error_popup.style.display = 'flex';
         }
         else if(email_parts[1].length <5){
-            error_popup.innerText = 'gmail extension is too short';
+            error_popup.innerText = 'gmail extension is too short (minimum 5 characters)';
             error_popup.style.display = 'flex';
         };
 
+    }
+
+    // Phone Number Validation
+    let country_code = phone_input.value.slice(0, 4);
+    if(country_code == '+961'){
+        console.log('valid');
+    }else{
+        error_popup.innerText = 'country code must be "+961"';
+        error_popup.style.display = 'flex';
     }
 
 

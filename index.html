@@ -108,8 +108,11 @@
 
     <section class="contact-section" id="contact">
 
-<form action="" class="contact-form">
-        <h1>CONTACT ME</h1>
+<form action="" class="contact-form" onsubmit="return false">
+
+            <h1>CONTACT ME</h1>
+
+            <p id="error-popup" class="contact-error"></p>
                 
             <div class="break-star">
                 <hr class="dark">
@@ -117,15 +120,15 @@
                 <hr class="dark">
             </div>
 
-            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Full Name" id="name-input">
 
-            <input type="text" placeholder="Email Address">
+            <input type="text" placeholder="Email Address" id="email-input">
 
-            <input type="text" placeholder="Phone Number">
+            <input type="text" placeholder="Phone Number" id="phone-input">
 
-            <textarea name="" id="" cols="40" rows="10" placeholder="Message"></textarea>
+            <textarea name="" id="message-input" cols="40" rows="10" placeholder="Message"></textarea>
 
-            <button class="blue-btn">Send</button>
+            <button class="blue-btn" id="send-btn">Send</button>
 
 </form>
 

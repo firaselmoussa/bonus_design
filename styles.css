@@ -173,7 +173,6 @@ header{
     border-radius: 10px;
 }
 
-
 /* ABOUT */
 
 .about-section{
@@ -231,6 +230,11 @@ header{
     justify-content: center;
     align-items: center;
 }
+@media only screen and (max-width: 666px) {
+.contact-form {
+    width: 100%;
+}
+}
 
 .contact-form h1{
     font-size: 50px;
@@ -251,6 +255,7 @@ header{
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
     font-size: 25px;
@@ -261,11 +266,22 @@ header{
     margin: 20px 0 60px 0;
 }
 
+.contact-error{
+    display: none;
+    border:1px solid red;
+    background: rgba(255, 0, 0, 0.2);
+    color: red;
+    font-weight: lighter;
+    padding: 5px 15px;
+    align-self: center;
+    border-radius: 2px;
+}
+
 /* FOOTER */
 
 footer{
     background: var(--dark-blue);
-    height: 60vh;
+    height: fit-content;
 }
 
 .upper-footer{
@@ -273,11 +289,25 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* width: 90%; */
+    flex-flow: wrap row;
 }
 
 .upper-footer div{
     width: 25%;
+}
+
+@media only screen and (max-width: 750px) {
+    .upper-footer {
+        display: flex;
+        flex-flow: wrap column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .upper-footer div {
+        width: 50%;
+    }
+
 }
 
 .footer-imgs{
@@ -315,60 +345,38 @@ footer{
     }
 
     .header-links{
-        display: none;
-    }
-
-    .header-link{
-        margin: 15px 0 0 16vw;
-    }
-
-    header{
-        z-index: 3;
-    }
-
-}
-
-.menu-show{
-    display: flex;
+        display: flex;
     flex-flow: wrap column;
     justify-content: flex-start;
     align-items: flex-start;
     position: absolute;
     left: 0;
     top: 0px;
-    opacity: 0;
+    opacity: 1;
     width: 100vw;
     height: 25vh;
     background: var(--dark-blue);
-    animation: show-menu 1s ease-out forwards;
-    
+    z-index: -1;
+    }
+
+    .header-link{
+        margin: 15px 0 0 16vw;
+    }
+
 }
 
-.menu-hide {
-        display: flex;
-            flex-flow: wrap column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width: 100vw;
-            height: 25vh;
-            background: var(--dark-blue);
-    animation: hide-menu 1s ease-out forwards;
-}
 
 @keyframes show-menu {
-    30%{
-        opacity: 0;
-        top: 40px;
-    }100%{
-        opacity: 1;
+to{
         top: 100px;
+        z-index: 0;
     }
 }
 
 @keyframes hide-menu {
 
     to{
-        opacity: 0;
+        z-index: -1;
         top: 0px;
     }
 }

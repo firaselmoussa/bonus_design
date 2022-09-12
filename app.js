@@ -37,9 +37,11 @@ send_btn.addEventListener('click', ()=>{
 
     let email_list = email_input.value.split('');
 
+    // spliting the email into two parts to check the length of each before and after the '@' sign
     let email_parts = email_input.value.split('@', 2);
     let is_email = false;
 
+    // checking for the '@' sign
     email_list.forEach(element => {
         if(element == '@'){
             is_email = true;
@@ -66,29 +68,33 @@ send_btn.addEventListener('click', ()=>{
     // Phone Number Validation
     let country_code = phone_input.value.slice(0, 4);
     
+    // validating country code
     if(country_code == '+961'){
         
+        
         if( phone_input.value.slice(4)[0] == '3'){
+            // validating number's length
             if(phone_input.value.slice(4).length <7){
                 error_popup.innerText = 'phone number too short (i.e: +9613456789)';
                 error_popup.style.display = 'flex';
             }
         }else{
+            // validating number's length
             if(phone_input.value.slice(4).length <8){
                 error_popup.innerText = 'phone number too short (i.e: +96171456789)';
                 error_popup.style.display = 'flex';
-            }
-        }
+            };
+        };
 
     }else{
         error_popup.innerText = 'country code must be "+961"';
         error_popup.style.display = 'flex';
-    }
+    };
 
-    
+    // Message validation
     if(message_input.value.length <100){
         error_popup.innerText = 'message too short (minimum 100 characters)';
         error_popup.style.display = 'flex';
-    }
+    };
 
 });

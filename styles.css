@@ -173,7 +173,6 @@ header{
     border-radius: 10px;
 }
 
-
 /* ABOUT */
 
 .about-section{
@@ -256,6 +255,7 @@ header{
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
     font-size: 25px;
@@ -289,7 +289,7 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-        flex-flow: wrap row;
+    flex-flow: wrap row;
 }
 
 .upper-footer div{

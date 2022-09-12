@@ -3,6 +3,9 @@ body{
     margin: 0;
     padding: 0;
     color: white;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 /* UTILITIES */
@@ -32,4 +35,26 @@ body{
 
 .links{
     color: var(--btn-color);
+}
+
+/* HEADER */
+header{
+    background: var(--dark-blue);
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-link {
+    color: white;
+    margin: 0 30px;
+    text-decoration: none;
 }

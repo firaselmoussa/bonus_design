@@ -41,14 +41,24 @@ send_btn.addEventListener('click', ()=>{
     email_list.forEach(element => {
         if(element == '@'){
             is_email = true;
-            console.log('valid', element);
-            
         }
     });
 
     if(!is_email){
         error_popup.innerText = 'email invalid (include "@")';
         error_popup.style.display = 'flex';
+    }else{
+
+        
+        if(email_parts[0].length < 3){
+            error_popup.innerText = 'gmail name is too short';
+            error_popup.style.display = 'flex';
+        }
+        else if(email_parts[1].length <5){
+            error_popup.innerText = 'gmail extension is too short';
+            error_popup.style.display = 'flex';
+        };
+
     }
 
 

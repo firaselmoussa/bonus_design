@@ -8,20 +8,17 @@ if(isset($_POST["full_name"]) && isset($_POST["email"]) && isset($_POST["phone_n
 $full_name = $_POST["full_name"];
 $email = $_POST["email"];
 $phone_number = $_POST["phone_number"];
-$message = $_POST["messge"];
+$message = $_POST["message"];
 
 
-$query = "INSERT INTO articles(full_name, email, phone_number, message) VALUE (" .$full_name. "," .$email. "," .$phone_number. "," .$message. "?)";
-
-$query = $mysqli->prepare("INSERT INTO message_info(full_name, email) VALUE (?, ?)");
-$query->bind_param("ss", $full_name, $email, $phone_number, $message);
+$query = $mysqli->prepare("INSERT INTO message_info(full_name, email, phone_number, message) VALUE (?, ?, ?, ?)");
+$query->bind_param("ssss", $full_name, $email, $phone_number, $message);
 $query->execute();
 
 $response = [];
 $response["success"] = true;
 
 echo json_encode($response);
-
 
 
     };

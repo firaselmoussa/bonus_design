@@ -98,3 +98,37 @@ send_btn.addEventListener('click', ()=>{
     };
 
 });
+
+
+
+
+
+
+////////////////////////////
+let form = document.getElementById('form');
+form.addEventListener('submit', function(e){
+    e.preventDefault()
+
+    fetch('http://localhost/myprograms/contact_backend/backend/add_message.php', {
+    method: 'post',
+    body: new URLSearchParams({
+
+        full_name:name_input.value,
+        email:email_input.value,
+        phone_number:phone_input.value,
+        message:message_input.value
+
+    }),
+    headers: {
+        'Accept' : 'application/json',
+        'Content-type' : 'application/json' 
+    }
+    }).then((res) => res.json())
+    .then((data) => console.log(data))
+    .then((error) => console.log('Error', error))
+    
+
+});
+
+
+

@@ -108,7 +108,7 @@
 
     <section class="contact-section" id="contact">
 
-<form action="" class="contact-form" onsubmit="return false">
+<form action="backend/add_message.php" method="POST" onsubmit="return true" class="contact-form" >
 
             <h1>CONTACT ME</h1>
 
@@ -120,13 +120,13 @@
                 <hr class="dark">
             </div>
 
-            <input type="text" placeholder="Full Name" id="name-input">
+            <input type="text" placeholder="Full Name" id="name-input" name="full_name">
 
-            <input type="text" placeholder="Email Address" id="email-input">
+            <input type="text" placeholder="Email Address" id="email-input" name="email">
 
-            <input type="text" placeholder="Phone Number" id="phone-input">
+            <input type="text" placeholder="Phone Number" id="phone-input" name="phone_number">
 
-            <textarea name="" id="message-input" cols="40" rows="10" placeholder="Message"></textarea>
+            <textarea name="" id="message-input" cols="40" rows="10" placeholder="Message" name="message"></textarea>
 
             <button class="blue-btn" id="send-btn">Send</button>
 
